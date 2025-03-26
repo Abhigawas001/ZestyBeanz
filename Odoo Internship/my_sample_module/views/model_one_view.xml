@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!--Form view-->
+		<record id="view_form_model_one" model="ir.ui.view">
+			<field name="name">model.one.form</field>
+			<field name="model">model.one</field>
+			<field name="arch" type="xml">
+				<form string='Model One'>
+					<field name="id" />
+					<field name="create_date" />
+				</form>
+			</field>
+		</record>
+		
+		<record id="view_tree_model_one" model="ir.ui.view">
+			<field name="name">model.one.tree</field>
+			<field name="model">model.one</field>
+			<field name="arch" type="xml">
+				<list string='Model One'>
+					<field name="id" />
+					<field name="create_date" />
+				</list>
+			</field>
+		</record>
+		
+		<!--action-->
+		<record id="action_for_model_one" model="ir.actions.act_window">
+			<field name="name"> Model One</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">model.one</field>
+			<field name="view_mode">list,form</field>
+			<field name="context">{}</field>
+			<field name="help" type="html">
+				<p>Model one has no data</p>
+			</field>
+		</record>
+
+	</data>
+</odoo>
+		
